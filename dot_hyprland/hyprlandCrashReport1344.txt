@@ -1,0 +1,174 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+"stable"
+
+Hyprland received signal 11 (Segmentation fault)
+
+Version: b394c1695c05cf3b2133a473aa459d4cd750911b
+Tag: v0.32.3-99-gb394c169
+
+System info:
+	System name: Linux
+	Node name: night
+	Release: 6.6.7-arch1-1
+	Version: #1 SMP PREEMPT_DYNAMIC Thu, 14 Dec 2023 03:45:42 +0000
+
+GPU:
+	2d:00.0 VGA compatible controller [0300]: NVIDIA Corporation GA102 [GeForce RTX 3080 Ti] [10de:2208] (rev a1) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Arch Linux"
+	PRETTY_NAME="Arch Linux"
+	ID=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="38;2;23;147;209"
+	HOME_URL="https://archlinux.org/"
+	DOCUMENTATION_URL="https://wiki.archlinux.org/"
+	SUPPORT_URL="https://bbs.archlinux.org/"
+	BUG_REPORT_URL="https://bugs.archlinux.org/"
+	PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+	LOGO=archlinux-logo
+	
+
+
+Backtrace:
+	#0 | Hyprland(_Z12getBacktracev+0x62) [0x55eabfc2ce12]
+		??
+		??:0
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0x581) [0x55eabfbf9101]
+		??
+		??:0
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x43) [0x55eabfb86213]
+		??
+		??:0
+	#3 | /usr/lib/libc.so.6(+0x3e710) [0x7f7eac45c710]
+		??
+		??:0
+	#4 | Hyprland(_ZN6Events25listener_commitSubsurfaceEPvS0_+0x293) [0x55eabfc34803]
+		??
+		??:0
+	#5 | Hyprland(_Z13handleWrappedP11wl_listenerPv+0x56) [0x55eabfc337f6]
+		??
+		??:0
+	#6 | /usr/lib/libwayland-server.so.0(wl_signal_emit_mutable+0x7e) [0x7f7eacd8d01e]
+		??
+		??:0
+	#7 | /usr/lib/libwlroots.so.13032(+0x7769c) [0x7f7eace1069c]
+		??
+		??:0
+	#8 | /usr/lib/libffi.so.8(+0x74f6) [0x7f7eac31e4f6]
+		??
+		??:0
+	#9 | /usr/lib/libffi.so.8(+0x3f5e) [0x7f7eac31af5e]
+		??
+		??:0
+	#10 | /usr/lib/libffi.so.8(ffi_call+0x123) [0x7f7eac31db73]
+		??
+		??:0
+	#11 | /usr/lib/libwayland-server.so.0(+0x8ada) [0x7f7eacd8bada]
+		??
+		??:0
+	#12 | /usr/lib/libwayland-server.so.0(+0xd180) [0x7f7eacd90180]
+		??
+		??:0
+	#13 | /usr/lib/libwayland-server.so.0(wl_event_loop_dispatch+0xa2) [0x7f7eacd8eae2]
+		??
+		??:0
+	#14 | /usr/lib/libwayland-server.so.0(wl_display_run+0x27) [0x7f7eacd8f2d7]
+		??
+		??:0
+	#15 | Hyprland(main+0x8a1) [0x55eabfb6fec1]
+		??
+		??:0
+	#16 | /usr/lib/libc.so.6(+0x27cd0) [0x7f7eac445cd0]
+		??
+		??:0
+	#17 | /usr/lib/libc.so.6(__libc_start_main+0x8a) [0x7f7eac445d8a]
+		??
+		??:0
+	#18 | Hyprland(_start+0x25) [0x55eabfb83875]
+		??
+		??:0
+
+
+Log tail:
+hibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Keybind handling only locked (inhibitor)
+[LOG] Destroy called for monitor DP-2
+[LOG] onDisconnect called for DP-2
+[LOG] Callback 55eac08af3c8 -> 55eac08af3c0,  removed.
+[LOG] Callback 55eac08af500 -> 55eac08af4f8,  removed.
+[LOG] Callback 55eac08af568 -> 55eac08af560,  removed.
+[LOG] Callback 55eac08af5d0 -> 55eac08af5c8,  removed.
+[LOG] Callback 55eac08af638 -> 55eac08af630,  removed.
+[LOG] LayerSurface 55eac5fa48c0 unmapped
+[LOG] Framebuffer created, status 36053
+[LOG] Callback 55eac5f9a220 -> 55eac5f9a218, CWLSurface removed.
+[LOG] CWLSurface 55eac5f9a1e0 called destroy()
+[LOG] LayerSurface 55eac5fa48c0 destroyed
+[LOG] Callback 55eac5f9a3d8 -> 55eac5f9a3d0, layerSurface removed.
+[LOG] Callback 55eac5f9a2a0 -> 55eac5f9a298, layerSurface removed.
+[LOG] Callback 55eac5f9a308 -> 55eac5f9a300, layerSurface removed.
+[LOG] Callback 55eac5f9a370 -> 55eac5f9a368, layerSurface removed.
+[LOG] Callback 55eac5f9a440 -> 55eac5f9a438, layerSurface removed.
+[LOG] LayerSurface 55eac5ef8070 unmapped
+[LOG] Framebuffer created, status 36053
+[LOG] Callback 55eac03a4b20 -> 55eac03a4b18, CWLSurface removed.
+[LOG] CWLSurface 55eac03a4ae0 called destroy()
+[LOG] LayerSurface 55eac5ef8070 destroyed
+[LOG] Callback 55eac03a4cd8 -> 55eac03a4cd0, layerSurface removed.
+[LOG] Callback 55eac03a4ba0 -> 55eac03a4b98, layerSurface removed.
+[LOG] Callback 55eac03a4c08 -> 55eac03a4c00, layerSurface removed.
+[LOG] Callback 55eac03a4c70 -> 55eac03a4c68, layerSurface removed.
+[LOG] Callback 55eac03a4d40 -> 55eac03a4d38, layerSurface removed.
+[LOG] Removed monitor DP-2!
+[LOG] moveWorkspaceToMonitor: Moving 2 to monitor 0
+[LOG] moveWorkspaceToMonitor: Plugging gap with new 3
+[LOG] moveWorkspaceToMonitor: Plugging gap with existing 3
+[LOG] Disallowing setting focus to a window due to there being an active input inhibitor layer.
+[LOG] [hookSystem] New hook event registered: moveWorkspace
+[backend/drm/legacy.c:99] connector DP-2: Failed to set DPMS property: Invalid argument
+[LOG] Removing monitor DP-2 from realMonitors
+[LOG] Callback 55eac08af430 -> 55eac08af428,  removed.
+[LOG] Callback 55eac08af498 -> 55eac08af490,  removed.
+[LOG] SessionLockSurface 55eac06d2c50 destroyed
+[LOG] Callback 55eac06d2d58 -> 55eac06d2d50, SSessionLockSurface removed.
+[LOG] Callback 55eac06d2cf0 -> 55eac06d2ce8, SSessionLockSurface removed.
+[LOG] Callback 55eac06d2c88 -> 55eac06d2c80, SSessionLockSurface removed.
+[backend/drm/legacy.c:99] connector DP-2: Failed to set DPMS property: Invalid argument
+[backend/drm/drm.c:1208] connector DP-2: Failed to disable CRTC 68
+[LOG] Destroying workspace ID 3
+[LOG] Fading out a non-existent LS??
+[LOG] Callback 55eac0314288 -> 55eac0314280, CWLSurface removed.
+[LOG] CWLSurface 55eac0314248 called destroy()
+[LOG] Fading out a non-existent LS??

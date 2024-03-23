@@ -1,0 +1,165 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+All these computers...
+
+Hyprland received signal 11 (Segmentation fault)
+
+Version: b394c1695c05cf3b2133a473aa459d4cd750911b
+Tag: v0.32.3-99-gb394c169
+
+System info:
+	System name: Linux
+	Node name: night
+	Release: 6.6.7-arch1-1
+	Version: #1 SMP PREEMPT_DYNAMIC Thu, 14 Dec 2023 03:45:42 +0000
+
+GPU:
+	2d:00.0 VGA compatible controller [0300]: NVIDIA Corporation GA102 [GeForce RTX 3080 Ti] [10de:2208] (rev a1) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Arch Linux"
+	PRETTY_NAME="Arch Linux"
+	ID=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="38;2;23;147;209"
+	HOME_URL="https://archlinux.org/"
+	DOCUMENTATION_URL="https://wiki.archlinux.org/"
+	SUPPORT_URL="https://bbs.archlinux.org/"
+	BUG_REPORT_URL="https://bugs.archlinux.org/"
+	PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+	LOGO=archlinux-logo
+	
+
+
+Backtrace:
+	#0 | Hyprland(_Z12getBacktracev+0x62) [0x5610c966ae12]
+		??
+		??:0
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0x581) [0x5610c9637101]
+		??
+		??:0
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x43) [0x5610c95c4213]
+		??
+		??:0
+	#3 | /usr/lib/libc.so.6(+0x3e710) [0x7f684036f710]
+		??
+		??:0
+	#4 | Hyprland(_ZN6Events25listener_commitSubsurfaceEPvS0_+0x293) [0x5610c9672803]
+		??
+		??:0
+	#5 | Hyprland(_Z13handleWrappedP11wl_listenerPv+0x56) [0x5610c96717f6]
+		??
+		??:0
+	#6 | /usr/lib/libwayland-server.so.0(wl_signal_emit_mutable+0x7e) [0x7f6840d1c01e]
+		??
+		??:0
+	#7 | /usr/lib/libwlroots.so.13032(+0x7769c) [0x7f6840d9f69c]
+		??
+		??:0
+	#8 | /usr/lib/libffi.so.8(+0x74f6) [0x7f68402ac4f6]
+		??
+		??:0
+	#9 | /usr/lib/libffi.so.8(+0x3f5e) [0x7f68402a8f5e]
+		??
+		??:0
+	#10 | /usr/lib/libffi.so.8(ffi_call+0x123) [0x7f68402abb73]
+		??
+		??:0
+	#11 | /usr/lib/libwayland-server.so.0(+0x8ada) [0x7f6840d1aada]
+		??
+		??:0
+	#12 | /usr/lib/libwayland-server.so.0(+0xd180) [0x7f6840d1f180]
+		??
+		??:0
+	#13 | /usr/lib/libwayland-server.so.0(wl_event_loop_dispatch+0xa2) [0x7f6840d1dae2]
+		??
+		??:0
+	#14 | /usr/lib/libwayland-server.so.0(wl_display_run+0x27) [0x7f6840d1e2d7]
+		??
+		??:0
+	#15 | Hyprland(main+0x8a1) [0x5610c95adec1]
+		??
+		??:0
+	#16 | /usr/lib/libc.so.6(+0x27cd0) [0x7f6840358cd0]
+		??
+		??:0
+	#17 | /usr/lib/libc.so.6(__libc_start_main+0x8a) [0x7f6840358d8a]
+		??
+		??:0
+	#18 | Hyprland(_start+0x25) [0x5610c95c1875]
+		??
+		??:0
+
+
+Log tail:
+8: 5610caf99300 -> 5610ca9df2c0 (owner: CWLSurface)
+[LOG] CWLSurface 5610ca9df2a8 called init()
+[LOG] Callback 5610ca9df2e8 -> 5610ca9df2e0, CWLSurface removed.
+[LOG] CWLSurface 5610ca9df2a8 called destroy()
+[LOG] Registered signal for owner 5610ca9df2a8: 5610caf99300 -> 5610ca9df2c0 (owner: CWLSurface)
+[LOG] CWLSurface 5610ca9df2a8 called init()
+[LOG] Callback 5610ca9df2e8 -> 5610ca9df2e0, CWLSurface removed.
+[LOG] CWLSurface 5610ca9df2a8 called destroy()
+[LOG] Registered signal for owner 5610ca9df2a8: 5610caf99300 -> 5610ca9df2c0 (owner: CWLSurface)
+[LOG] CWLSurface 5610ca9df2a8 called init()
+[LOG] Callback 5610ca9df2e8 -> 5610ca9df2e0, CWLSurface removed.
+[LOG] CWLSurface 5610ca9df2a8 called destroy()
+[LOG] New mouse constraint at 5610caeea110
+[LOG] Registered signal for owner 5610cadfd430: 5610caeea218 -> 5610cadfd4d0 (owner: Constraint)
+[LOG] Registered signal for owner 5610cadfd430: 5610caeea208 -> 5610cadfd468 (owner: Constraint)
+[LOG] Registered signal for owner 5610ca8ae030: 5610cae03ec0 -> 5610ca8ae088 (owner: Mouse constraint commit)
+[LOG] Constrained mouse to 5610caeea110
+[LOG] Destroy called for monitor DP-2
+[LOG] onDisconnect called for DP-2
+[LOG] Callback 5610caf76be8 -> 5610caf76be0,  removed.
+[LOG] Callback 5610caf76d20 -> 5610caf76d18,  removed.
+[LOG] Callback 5610caf76d88 -> 5610caf76d80,  removed.
+[LOG] Callback 5610caf76df0 -> 5610caf76de8,  removed.
+[LOG] Callback 5610caf76e58 -> 5610caf76e50,  removed.
+[LOG] LayerSurface 5610d0668db0 unmapped
+[LOG] Framebuffer created, status 36053
+[LOG] Callback 5610d0668fa0 -> 5610d0668f98, CWLSurface removed.
+[LOG] CWLSurface 5610d0668f60 called destroy()
+[LOG] LayerSurface 5610d0668db0 destroyed
+[LOG] Callback 5610d0669158 -> 5610d0669150, layerSurface removed.
+[LOG] Callback 5610d0669020 -> 5610d0669018, layerSurface removed.
+[LOG] Callback 5610d0669088 -> 5610d0669080, layerSurface removed.
+[LOG] Callback 5610d06690f0 -> 5610d06690e8, layerSurface removed.
+[LOG] Callback 5610d06691c0 -> 5610d06691b8, layerSurface removed.
+[LOG] LayerSurface 5610d05cb220 unmapped
+[LOG] Framebuffer created, status 36053
+[LOG] Callback 5610caa67d50 -> 5610caa67d48, CWLSurface removed.
+[LOG] CWLSurface 5610caa67d10 called destroy()
+[LOG] LayerSurface 5610d05cb220 destroyed
+[LOG] Callback 5610caa67f08 -> 5610caa67f00, layerSurface removed.
+[LOG] Callback 5610caa67dd0 -> 5610caa67dc8, layerSurface removed.
+[LOG] Callback 5610caa67e38 -> 5610caa67e30, layerSurface removed.
+[LOG] Callback 5610caa67ea0 -> 5610caa67e98, layerSurface removed.
+[LOG] Callback 5610caa67f70 -> 5610caa67f68, layerSurface removed.
+[LOG] Removed monitor DP-2!
+[LOG] moveWorkspaceToMonitor: Moving 2 to monitor 0
+[LOG] [hookSystem] New hook event registered: moveWorkspace
+[LOG] moveWorkspaceToMonitor: Moving 3 to monitor 0
+[LOG] moveWorkspaceToMonitor: Plugging gap with new 4
+[LOG] moveWorkspaceToMonitor: Plugging gap with existing 4
+[LOG] Set keyboard focus to surface 5610db7fa830, with [Window 5610cacc1960: title: "RSI Launcher"]
+[LOG] moveWorkspaceToMonitor: SWITCHINGISACTIVE, active 1 -> 3
+[backend/drm/legacy.c:99] connector DP-2: Failed to set DPMS property: Invalid argument
+[LOG] Removing monitor DP-2 from realMonitors
+[LOG] Callback 5610caf76c50 -> 5610caf76c48,  removed.
+[LOG] Callback 5610caf76cb8 -> 5610caf76cb0,  removed.
+[LOG] Callback 5610cabd4850 -> 5610cabd4848, CRenderbuffer removed.
+[backend/drm/legacy.c:99] connector DP-2: Failed to set DPMS property: Invalid argument
+[backend/drm/drm.c:1208] connector DP-2: Failed to disable CRTC 68
+[LOG] Destroying workspace ID 4
+[LOG] Fading out a non-existent LS??
+[LOG] Minimize request for [Window 5610d46a1220: title: "Star Citizen "]
+[LOG] Fading out a non-existent LS??
+[LOG] Callback 5610ca8ae0b0 -> 5610ca8ae0a8, Mouse constraint commit removed.
+[LOG] Unconstrained mouse from 5610caeea110
+[LOG] Callback 5610cadfd4f8 -> 5610cadfd4f0, Constraint removed.
+[LOG] Callback 5610cadfd490 -> 5610cadfd488, Constraint removed.
+[LOG] Registered signal for owner 5610ca9df2a8: 5610caf99300 -> 5610ca9df2c0 (owner: CWLSurface)
+[LOG] CWLSurface 5610ca9df2a8 called init()

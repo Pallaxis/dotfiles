@@ -1,0 +1,152 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+*thud*
+
+Hyprland received signal 11 (Segmentation fault)
+
+Version: e44d6de555da72bd45ebd01c1293d53ea2700d3f
+Tag: v0.32.0-10-ge44d6de5
+
+System info:
+	System name: Linux
+	Node name: night
+	Release: 6.6.2-arch1-1
+	Version: #1 SMP PREEMPT_DYNAMIC Mon, 20 Nov 2023 23:18:21 +0000
+
+GPU:
+	2d:00.0 VGA compatible controller [0300]: NVIDIA Corporation GA102 [GeForce RTX 3080 Ti] [10de:2208] (rev a1) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Arch Linux"
+	PRETTY_NAME="Arch Linux"
+	ID=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="38;2;23;147;209"
+	HOME_URL="https://archlinux.org/"
+	DOCUMENTATION_URL="https://wiki.archlinux.org/"
+	SUPPORT_URL="https://bbs.archlinux.org/"
+	BUG_REPORT_URL="https://bugs.archlinux.org/"
+	PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+	LOGO=archlinux-logo
+	
+
+
+Backtrace:
+	#0 | Hyprland(_Z12getBacktracev+0x62) [0x55723ea16232]
+		??
+		??:0
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0x5a4) [0x55723e9ca564]
+		??
+		??:0
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x44) [0x55723e937cb4]
+		??
+		??:0
+	#3 | /usr/lib/libc.so.6(+0x3e710) [0x7f058516f710]
+		??
+		??:0
+	#4 | /usr/lib/libc.so.6(+0x15aedd) [0x7f058528bedd]
+		??
+		??:0
+	#5 | Hyprland(_ZNSt16basic_format_argISt20basic_format_contextINSt8__format10_Sink_iterIcEEcEE8_M_visitIZNS1_19_Formatting_scannerIS3_cE13_M_format_argEmEUlRT_E_EEDcOS9_NS1_6_Arg_tE+0x42b) [0x55723e97c42b]
+		??
+		??:0
+	#6 | Hyprland(+0xd3321) [0x55723e946321]
+		??
+		??:0
+	#7 | Hyprland(+0xd358d) [0x55723e94658d]
+		??
+		??:0
+	#8 | Hyprland(_ZSt7vformatB5cxx11St17basic_string_viewIcSt11char_traitsIcEESt17basic_format_argsISt20basic_format_contextINSt8__format10_Sink_iterIcEEcEE+0x89) [0x55723e97d959]
+		??
+		??:0
+	#9 | Hyprland(_ZN13CInputManager21applyConfigToKeyboardEP9SKeyboard+0xb1d) [0x55723eaa2d5d]
+		??
+		??:0
+	#10 | Hyprland(_ZN13CInputManager17setKeyboardLayoutEv+0x2c) [0x55723eaa473c]
+		??
+		??:0
+	#11 | Hyprland(_ZN14CConfigManager18loadConfigLoadVarsEv+0x11e8) [0x55723e9b9778]
+		??
+		??:0
+	#12 | Hyprland(_ZN14CConfigManager4tickEv+0x19e) [0x55723e9ba21e]
+		??
+		??:0
+	#13 | Hyprland(_Z11handleTimerPv+0x48) [0x55723ea8e968]
+		??
+		??:0
+	#14 | /usr/lib/libwayland-server.so.0(wl_event_loop_dispatch+0x2e7) [0x7f0585a6cd27]
+		??
+		??:0
+	#15 | /usr/lib/libwayland-server.so.0(wl_display_run+0x27) [0x7f0585a6d2d7]
+		??
+		??:0
+	#16 | Hyprland(_ZN11CCompositor15startCompositorEv+0x677) [0x55723e94ef17]
+		??
+		??:0
+	#17 | Hyprland(main+0xb3b) [0x55723e9236cb]
+		??
+		??:0
+	#18 | /usr/lib/libc.so.6(+0x27cd0) [0x7f0585158cd0]
+		??
+		??:0
+	#19 | /usr/lib/libc.so.6(__libc_start_main+0x8a) [0x7f0585158d8a]
+		??
+		??:0
+	#20 | Hyprland(_start+0x25) [0x55723e937b35]
+		??
+		??:0
+
+
+Log tail:
+[LOG] CWLSurface 557240073308 called init()
+[LOG] Callback 557240073348 -> 557240073340, CWLSurface removed.
+[LOG] CWLSurface 557240073308 called destroy()
+[LOG] Registered signal for owner 557240073308: 557240109010 -> 557240073320 (owner: CWLSurface)
+[LOG] CWLSurface 557240073308 called init()
+[LOG] Callback 557240073348 -> 557240073340, CWLSurface removed.
+[LOG] CWLSurface 557240073308 called destroy()
+[LOG] Searching for matching rules for kitty (title: ~)
+[LOG] Window rule opacity 0.80 0.80 -> class:^(kitty)$ matched [Window 557249f69ff0: title: "~"]
+[LOG] Window 557249f69ff0 set title to ~
+[LOG] Searching for matching rules for kitty (title: pallaxis@night:~)
+[LOG] Window rule opacity 0.80 0.80 -> class:^(kitty)$ matched [Window 557249f69ff0: title: "pallaxis@night:~"]
+[LOG] Window 557249f69ff0 set title to pallaxis@night:~
+[LOG] Reloading the config!
+[LOG] Created a bezier curve, baked 255 points, mem usage: 4.08kB, time to bake: 14.56µs. Estimated average calc time: 0.05µs.
+[LOG] Using config: /home/pallaxis/.config/hypr/hyprland.conf
+[LOG] Created a bezier curve, baked 255 points, mem usage: 4.08kB, time to bake: 11.96µs. Estimated average calc time: 0.04µs.
+[LOG] Created a bezier curve, baked 255 points, mem usage: 4.08kB, time to bake: 11.52µs. Estimated average calc time: 0.05µs.
+[LOG] Created a bezier curve, baked 255 points, mem usage: 4.08kB, time to bake: 11.42µs. Estimated average calc time: 0.04µs.
+[LOG] Created a bezier curve, baked 255 points, mem usage: 4.08kB, time to bake: 11.46µs. Estimated average calc time: 0.05µs.
+[LOG] Registered dynamic var "$mainMod" -> SUPER
+[LOG] Registered dynamic var "$term" -> kitty
+[LOG] Registered dynamic var "$editor" -> vscodium
+[LOG] Registered dynamic var "$file" -> dolphin
+[LOG] Registered dynamic var "$browser" -> firefox
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 hyprctl setcursor Bibata-Modern-Ice 20
+[LOG] Process Created with pid 108305
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'
+[LOG] Process Created with pid 108307
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 gsettings set org.gnome.desktop.interface cursor-size 20
+[LOG] Process Created with pid 108309
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 gsettings set org.gnome.desktop.interface font-name 'Cantarell 10'
+[LOG] Process Created with pid 108318
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 gsettings set org.gnome.desktop.interface document-font-name 'Cantarell 10'
+[LOG] Process Created with pid 108324
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 gsettings set org.gnome.desktop.interface monospace-font-name 'CaskaydiaCove Nerd Font Mono 9'
+[LOG] Process Created with pid 108330
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 gsettings set org.gnome.desktop.interface font-antialiasing 'rgba'
+[LOG] Process Created with pid 108336
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 gsettings set org.gnome.desktop.interface font-hinting 'full'
+[LOG] Process Created with pid 108342
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-dracula'
+[LOG] Process Created with pid 108348
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 gsettings set org.gnome.desktop.interface gtk-theme 'Catppuccin-Mocha'
+[LOG] Process Created with pid 108354
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+[LOG] Process Created with pid 108360
+[LOG] ApplyConfigToKeyboard for "power-button", hasconfig: 0
+[LOG] Attempting to create a keymap for layout us with variant colemak-mod-dh-matrix (rules: , model: , options: )
+[ERR] Keyboard layout us with variant colemak-mod-dh-matrix (rules: , model: , options: ) couldn't have been loaded.

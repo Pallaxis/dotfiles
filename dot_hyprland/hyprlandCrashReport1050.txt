@@ -1,0 +1,146 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+All these computers...
+
+Hyprland received signal 11 (Segmentation fault)
+
+Version: e44d6de555da72bd45ebd01c1293d53ea2700d3f
+Tag: v0.32.0-10-ge44d6de5
+
+System info:
+	System name: Linux
+	Node name: night
+	Release: 6.6.2-arch1-1
+	Version: #1 SMP PREEMPT_DYNAMIC Mon, 20 Nov 2023 23:18:21 +0000
+
+GPU:
+	2d:00.0 VGA compatible controller [0300]: NVIDIA Corporation GA102 [GeForce RTX 3080 Ti] [10de:2208] (rev a1) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Arch Linux"
+	PRETTY_NAME="Arch Linux"
+	ID=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="38;2;23;147;209"
+	HOME_URL="https://archlinux.org/"
+	DOCUMENTATION_URL="https://wiki.archlinux.org/"
+	SUPPORT_URL="https://bbs.archlinux.org/"
+	BUG_REPORT_URL="https://bugs.archlinux.org/"
+	PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+	LOGO=archlinux-logo
+	
+
+
+Backtrace:
+	#0 | Hyprland(_Z12getBacktracev+0x62) [0x55b303253232]
+		??
+		??:0
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0x5a4) [0x55b303207564]
+		??
+		??:0
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x44) [0x55b303174cb4]
+		??
+		??:0
+	#3 | /usr/lib/libc.so.6(+0x3e710) [0x7f990556f710]
+		??
+		??:0
+	#4 | Hyprland(+0x1cd9a9) [0x55b30327d9a9]
+		??
+		??:0
+	#5 | Hyprland(_ZN18CHyprDwindleLayout18recalculateMonitorERKi+0x494) [0x55b303284254]
+		??
+		??:0
+	#6 | Hyprland(_ZN18CHyprDwindleLayout26fullscreenRequestForWindowEP7CWindow15eFullscreenModeb+0x431) [0x55b303284711]
+		??
+		??:0
+	#7 | Hyprland(_ZN11CCompositor19setWindowFullscreenEP7CWindowb15eFullscreenMode+0x117) [0x55b30318e587]
+		??
+		??:0
+	#8 | Hyprland(_ZN6Events25listener_fullscreenWindowEPvS0_+0x159) [0x55b303244e69]
+		??
+		??:0
+	#9 | Hyprland(_Z13handleWrappedP11wl_listenerPv+0x57) [0x55b303270897]
+		??
+		??:0
+	#10 | /usr/lib/libwayland-server.so.0(wl_signal_emit_mutable+0x7e) [0x7f9905e8f01e]
+		??
+		??:0
+	#11 | /usr/lib/libwlroots.so.12032(+0xb0eec) [0x7f9905f88eec]
+		??
+		??:0
+	#12 | /usr/lib/libwayland-server.so.0(wl_event_loop_dispatch+0xa2) [0x7f9905e90ae2]
+		??
+		??:0
+	#13 | /usr/lib/libwayland-server.so.0(wl_display_run+0x27) [0x7f9905e912d7]
+		??
+		??:0
+	#14 | Hyprland(_ZN11CCompositor15startCompositorEv+0x677) [0x55b30318bf17]
+		??
+		??:0
+	#15 | Hyprland(main+0xb3b) [0x55b3031606cb]
+		??
+		??:0
+	#16 | /usr/lib/libc.so.6(+0x27cd0) [0x7f9905558cd0]
+		??
+		??:0
+	#17 | /usr/lib/libc.so.6(__libc_start_main+0x8a) [0x7f9905558d8a]
+		??
+		??:0
+	#18 | Hyprland(_start+0x25) [0x55b303174b35]
+		??
+		??:0
+
+
+Log tail:
+[LOG] Callback 55b306a79a98 -> 55b306a79a90, CWLSurface removed.
+[LOG] CWLSurface 55b306a79a58 called destroy()
+[LOG] Registered signal for owner 55b306a79a58: 55b30680efd0 -> 55b306a79a70 (owner: CWLSurface)
+[LOG] CWLSurface 55b306a79a58 called init()
+[LOG] Callback 55b306a79a98 -> 55b306a79a90, CWLSurface removed.
+[LOG] CWLSurface 55b306a79a58 called destroy()
+[LOG] Registered signal for owner 55b306a79a58: 55b30680efd0 -> 55b306a79a70 (owner: CWLSurface)
+[LOG] CWLSurface 55b306a79a58 called init()
+[LOG] Callback 55b306a79a98 -> 55b306a79a90, CWLSurface removed.
+[LOG] CWLSurface 55b306a79a58 called destroy()
+[LOG] Registered signal for owner 55b306a79a58: 55b30680efd0 -> 55b306a79a70 (owner: CWLSurface)
+[LOG] CWLSurface 55b306a79a58 called init()
+[LOG] Callback 55b306a79a98 -> 55b306a79a90, CWLSurface removed.
+[LOG] CWLSurface 55b306a79a58 called destroy()
+[LOG] Registered signal for owner 55b306a79a58: 55b30680efd0 -> 55b306a79a70 (owner: CWLSurface)
+[LOG] CWLSurface 55b306a79a58 called init()
+[LOG] Callback 55b306a79a98 -> 55b306a79a90, CWLSurface removed.
+[LOG] CWLSurface 55b306a79a58 called destroy()
+[LOG] Registered signal for owner 55b306a79a58: 55b30680efd0 -> 55b306a79a70 (owner: CWLSurface)
+[LOG] CWLSurface 55b306a79a58 called init()
+[LOG] Callback 55b306a79a98 -> 55b306a79a90, CWLSurface removed.
+[LOG] CWLSurface 55b306a79a58 called destroy()
+[LOG] Registered signal for owner 55b306a79a58: 55b30680efd0 -> 55b306a79a70 (owner: CWLSurface)
+[LOG] CWLSurface 55b306a79a58 called init()
+[LOG] Set keyboard focus to surface 55b30e0bcaa0, with [Window 55b30e3457f0: title: "@Yocoholo - Discord"]
+[LOG] Set keyboard focus to surface 55b30e167c90, with [Window 55b30e346da0: title: "Mindustry"]
+[LOG] Callback 55b306a79a98 -> 55b306a79a90, CWLSurface removed.
+[LOG] CWLSurface 55b306a79a58 called destroy()
+[LOG] Registered signal for owner 55b306a79a58: 55b3069c00f0 -> 55b306a79a70 (owner: CWLSurface)
+[LOG] CWLSurface 55b306a79a58 called init()
+[LOG] Callback 55b306a79a98 -> 55b306a79a90, CWLSurface removed.
+[LOG] CWLSurface 55b306a79a58 called destroy()
+[LOG] Registered signal for owner 55b306a79a58: 55b3069c00f0 -> 55b306a79a70 (owner: CWLSurface)
+[LOG] CWLSurface 55b306a79a58 called init()
+[LOG] Callback 55b306a79a98 -> 55b306a79a90, CWLSurface removed.
+[LOG] CWLSurface 55b306a79a58 called destroy()
+[LOG] Registered signal for owner 55b306a79a58: 55b3069c00f0 -> 55b306a79a70 (owner: CWLSurface)
+[LOG] CWLSurface 55b306a79a58 called init()
+[LOG] Searching for matching rules for Mindustry (title: Mindustry)
+[LOG] Scanout mode ON set for [Window 55b30e346da0: title: "Mindustry"]
+[LOG] [Window 55b30e346da0: title: "Mindustry"] fullscreen to true
+[LOG] Keybind triggered, calling dispatcher (64, mouse:272, 0)
+[LOG] Dragging a fullscreen window
+[LOG] Searching for matching rules for Mindustry (title: Mindustry)
+[LOG] Scanout mode OFF set for [Window 55b30e346da0: title: "Mindustry"]
+[LOG] Minimize request for [Window 55b30e346da0: title: "Mindustry"]
+[LOG] Searching for matching rules for Mindustry (title: Mindustry)
+[LOG] Scanout mode ON set for [Window 55b30e346da0: title: "Mindustry"]
+[LOG] [Window 55b30e346da0: title: "Mindustry"] fullscreen to true
+[LOG] Keybind triggered, calling dispatcher (64, mouse:272, 0)

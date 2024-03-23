@@ -1,0 +1,163 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+Calm down, it was a misinput! MISINPUT!
+
+Hyprland received signal 6 (Aborted)
+
+Version: b394c1695c05cf3b2133a473aa459d4cd750911b
+Tag: v0.32.3-99-gb394c169
+
+System info:
+	System name: Linux
+	Node name: night
+	Release: 6.6.7-arch1-1
+	Version: #1 SMP PREEMPT_DYNAMIC Thu, 14 Dec 2023 03:45:42 +0000
+
+GPU:
+	2d:00.0 VGA compatible controller [0300]: NVIDIA Corporation GA102 [GeForce RTX 3080 Ti] [10de:2208] (rev a1) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Arch Linux"
+	PRETTY_NAME="Arch Linux"
+	ID=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="38;2;23;147;209"
+	HOME_URL="https://archlinux.org/"
+	DOCUMENTATION_URL="https://wiki.archlinux.org/"
+	SUPPORT_URL="https://bbs.archlinux.org/"
+	BUG_REPORT_URL="https://bugs.archlinux.org/"
+	PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+	LOGO=archlinux-logo
+	
+
+
+Backtrace:
+	#0 | Hyprland(_Z12getBacktracev+0x62) [0x5579c538fe12]
+		??
+		??:0
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0x581) [0x5579c535c101]
+		??
+		??:0
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x43) [0x5579c52e9213]
+		??
+		??:0
+	#3 | /usr/lib/libc.so.6(+0x3e710) [0x7f2f90c5c710]
+		??
+		??:0
+	#4 | /usr/lib/libc.so.6(+0x8e83c) [0x7f2f90cac83c]
+		??
+		??:0
+	#5 | /usr/lib/libc.so.6(raise+0x18) [0x7f2f90c5c668]
+		??
+		??:0
+	#6 | /usr/lib/libc.so.6(abort+0xd7) [0x7f2f90c444b8]
+		??
+		??:0
+	#7 | /usr/lib/libc.so.6(+0x27390) [0x7f2f90c45390]
+		??
+		??:0
+	#8 | /usr/lib/libc.so.6(+0x987b7) [0x7f2f90cb67b7]
+		??
+		??:0
+	#9 | /usr/lib/libc.so.6(+0x9aa84) [0x7f2f90cb8a84]
+		??
+		??:0
+	#10 | /usr/lib/libc.so.6(free+0x73) [0x7f2f90cbb353]
+		??
+		??:0
+	#11 | Hyprland(+0xc13ac) [0x5579c53033ac]
+		??
+		??:0
+	#12 | Hyprland(+0xc1498) [0x5579c5303498]
+		??
+		??:0
+	#13 | Hyprland(+0xc1d4e) [0x5579c5303d4e]
+		??
+		??:0
+	#14 | Hyprland(_ZN11CCompositorD1Ev+0x75e) [0x5579c52ef1de]
+		??
+		??:0
+	#15 | Hyprland(main+0x8df) [0x5579c52d2eff]
+		??
+		??:0
+	#16 | /usr/lib/libc.so.6(+0x27cd0) [0x7f2f90c45cd0]
+		??
+		??:0
+	#17 | /usr/lib/libc.so.6(__libc_start_main+0x8a) [0x7f2f90c45d8a]
+		??
+		??:0
+	#18 | Hyprland(_start+0x25) [0x5579c52e6875]
+		??
+		??:0
+
+
+Log tail:
+ontent: swww
+[WARN] Layersurface unmapping on invalid monitor (removed?) ignoring.
+[LOG] LayerSurface 5579cb52d3f0 destroyed
+[WARN] Layersurface destroyed on an invalid monitor (removed?)
+[LOG] Callback 5579cb520178 -> 5579cb520170, layerSurface removed.
+[LOG] Callback 5579cb520040 -> 5579cb520038, layerSurface removed.
+[LOG] Callback 5579cb5200a8 -> 5579cb5200a0, layerSurface removed.
+[LOG] Callback 5579cb520110 -> 5579cb520108, layerSurface removed.
+[LOG] Callback 5579cb5201e0 -> 5579cb5201d8, layerSurface removed.
+[LOG] Callback 5579cb51ffc0 -> 5579cb51ffb8, CWLSurface removed.
+[LOG] CWLSurface 5579cb51ff80 called destroy()
+[LOG] Subsurface Node 5579c5f58a50 destroyed
+[LOG] Callback 5579c5f58b68 -> 5579c5f58b60, SurfaceTreeNode removed.
+[LOG] Callback 5579c5f58b00 -> 5579c5f58af8, SurfaceTreeNode removed.
+[LOG] Callback 5579c5f58bd0 -> 5579c5f58bc8, SurfaceTreeNode removed.
+[LOG] Callback 5579c588e7f8 -> 5579c588e7f0, CWLSurface removed.
+[LOG] CWLSurface 5579c588e7b8 called destroy()
+[LOG] Subsurface Node 5579c5b71ef0 destroyed
+[LOG] Callback 5579c5b72008 -> 5579c5b72000, SurfaceTreeNode removed.
+[LOG] Callback 5579c5b71fa0 -> 5579c5b71f98, SurfaceTreeNode removed.
+[LOG] Callback 5579c5b72070 -> 5579c5b72068, SurfaceTreeNode removed.
+[LOG] Hyprctl: dispatcher exit : 0
+[LOG] Hyprland reached the end.
+[LOG] Callback 5579c5907868 -> 5579c5907860, Keyboard removed.
+[LOG] Callback 5579c5907800 -> 5579c59077f8, Keyboard removed.
+[LOG] Callback 5579c5907798 -> 5579c5907790, Keyboard removed.
+[LOG] Callback 5579c5907730 -> 5579c5907728, Keyboard removed.
+[LOG] Callback 5579c5bf2448 -> 5579c5bf2440, Keyboard removed.
+[LOG] Callback 5579c5bf23e0 -> 5579c5bf23d8, Keyboard removed.
+[LOG] Callback 5579c5bf2378 -> 5579c5bf2370, Keyboard removed.
+[LOG] Callback 5579c5bf2310 -> 5579c5bf2308, Keyboard removed.
+[LOG] Callback 5579c5923188 -> 5579c5923180, Keyboard removed.
+[LOG] Callback 5579c5923120 -> 5579c5923118, Keyboard removed.
+[LOG] Callback 5579c59230b8 -> 5579c59230b0, Keyboard removed.
+[LOG] Callback 5579c5923050 -> 5579c5923048, Keyboard removed.
+[LOG] Callback 5579c59193a8 -> 5579c59193a0, Keyboard removed.
+[LOG] Callback 5579c5919340 -> 5579c5919338, Keyboard removed.
+[LOG] Callback 5579c59192d8 -> 5579c59192d0, Keyboard removed.
+[LOG] Callback 5579c5919270 -> 5579c5919268, Keyboard removed.
+[LOG] Callback 5579c5b74718 -> 5579c5b74710, Keyboard removed.
+[LOG] Callback 5579c5b746b0 -> 5579c5b746a8, Keyboard removed.
+[LOG] Callback 5579c5b74648 -> 5579c5b74640, Keyboard removed.
+[LOG] Callback 5579c5b745e0 -> 5579c5b745d8, Keyboard removed.
+[LOG] Callback 5579c5d81208 -> 5579c5d81200, Keyboard removed.
+[LOG] Callback 5579c5d811a0 -> 5579c5d81198, Keyboard removed.
+[LOG] Callback 5579c5d81138 -> 5579c5d81130, Keyboard removed.
+[LOG] Callback 5579c5d810d0 -> 5579c5d810c8, Keyboard removed.
+[LOG] Callback 5579c5dbc198 -> 5579c5dbc190, Keyboard removed.
+[LOG] Callback 5579c5dbc130 -> 5579c5dbc128, Keyboard removed.
+[LOG] Callback 5579c5dbc0c8 -> 5579c5dbc0c0, Keyboard removed.
+[LOG] Callback 5579c5dbc060 -> 5579c5dbc058, Keyboard removed.
+[LOG] Callback 5579c5beb1d8 -> 5579c5beb1d0, Mouse removed.
+[LOG] Callback 5579c58c0698 -> 5579c58c0690, Mouse removed.
+[LOG] Callback 5579c570b078 -> 5579c570b070, Mouse removed.
+[LOG] Callback 5579c575d908 -> 5579c575d900, Mouse removed.
+[LOG] Callback 5579c5b723d8 -> 5579c5b723d0, textInput removed.
+[LOG] Callback 5579c5b72370 -> 5579c5b72368, textInput removed.
+[LOG] Callback 5579c5b72308 -> 5579c5b72300, textInput removed.
+[LOG] Callback 5579c5b722a0 -> 5579c5b72298, textInput removed.
+[LOG] Callback 5579c5a88a98 -> 5579c5a88a90, textInput removed.
+[LOG] Callback 5579c5a88a30 -> 5579c5a88a28, textInput removed.
+[LOG] Callback 5579c5a889c8 -> 5579c5a889c0, textInput removed.
+[LOG] Callback 5579c5a88960 -> 5579c5a88958, textInput removed.
+[LOG] Callback 5579c5ef6d48 -> 5579c5ef6d40, textInput removed.
+[LOG] Callback 5579c5ef6ce0 -> 5579c5ef6cd8, textInput removed.
+[LOG] Callback 5579c5ef6c78 -> 5579c5ef6c70, textInput removed.
+[LOG] Callback 5579c5ef6c10 -> 5579c5ef6c08, textInput removed.

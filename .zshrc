@@ -91,8 +91,8 @@ alias mkdir='mkdir -p'
 alias ssh='kitten ssh'
 
 # Custom aliases
-alias homeserver='ssh pallaxis@192.168.68.56'
-alias oraclebox='ssh opc@192.9.176.125'
+alias homeserver='cat ~/.secrets/homeserver'
+alias oraclebox='cat ~/.secrets/oraclebox'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,0 +1,7 @@
+[user]
+	name = Pallaxis
+	email = sam_e3u@hotmail.com
+[core]
+	editor = nvim
+[credential]
+	helper = store

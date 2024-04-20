@@ -93,7 +93,8 @@ alias ssh='kitten ssh'
 # Custom aliases
 alias homeserver='cat ~/.secrets/homeserver'
 alias oraclebox='cat ~/.secrets/oraclebox'
-
+alias sudo='sudo '
+alias nv='nvim'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

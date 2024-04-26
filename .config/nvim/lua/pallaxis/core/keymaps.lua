@@ -1,3 +1,2 @@
-local g = vim.g
-g.mapleader = " "
-g.havenerdfont = true
+vim.g.mapleader = " "
+vim.g.havenerdfont = true

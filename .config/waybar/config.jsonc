@@ -13,8 +13,8 @@
 
 // positions //
 
-	"modules-center": ["custom/padd","custom/l_end","custom/icon","wlr/taskbar","mpris","custom/r_end","custom/padd"],
-	"modules-left": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/r_end","custom/padd"],
+	"modules-left": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/r_end","custom/l_end","mpris","custom/r_end","custom/padd"],
+	"modules-center": ["custom/padd","custom/l_end","custom/icon","wlr/taskbar","custom/r_end","custom/padd"],
 	"modules-right": ["custom/padd","custom/l_end","backlight","network","pulseaudio","pulseaudio#microphone","custom/updates","custom/r_end","custom/l_end","tray","battery","custom/r_end","custom/l_end","custom/power","custom/r_end","custom/padd"],
 
 
@@ -42,14 +42,14 @@
         "rotate": 0,
         "format-paused": "{status_icon} <i>{dynamic}</i>",
         "player-icons": { 
-            "default": "▶",
+            "default": "⏸",
             "mpv": "🎵"
         },
         "status-icons": {
-            "paused": "⏸"
+            "paused": "▶"
         },
         // "ignored-players": ["firefox"]
-        "max-length": 1000,
+        "max-length": 50,
         "interval": 1
     },
 
@@ -101,7 +101,7 @@
         "format-wifi": " ",
         "rotate": 0,
         "format-alt": "󰈀 {ipaddr}",
-        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "tooltip-format": "Interface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰖪 ",
         "tooltip-format-disconnected": "Disconnected",

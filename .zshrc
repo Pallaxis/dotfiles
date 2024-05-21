@@ -76,7 +76,7 @@ alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 alias un='yay -Rns' # uninstall package
-alias up='yay -Syu && flatpak update' # update system/package/aur
+alias up='update.sh up' # update system/package/aur
 alias pl='yay -Qs' # list installed package
 alias pa='yay -Ss' # list availabe package
 alias pc='yay -Sc' # remove unused cache

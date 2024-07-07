@@ -15,7 +15,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     leading_diamond = ''
     background = 'white'
     foreground = 'black'
-    template = '  '
+    template = '   '
 
     [blocks.segments.properties]
       style = 'full'
@@ -31,10 +31,8 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     template = ' {{ .Path }} '
 
     [blocks.segments.properties]
-      style = 'full'
-
-
-
+      style = 'agnoster_short'
+      home_icon = '󰋜 <b>~</b>'
 
   [[blocks.segments]]
     type = 'git'

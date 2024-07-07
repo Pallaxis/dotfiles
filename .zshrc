@@ -89,6 +89,7 @@ alias ssh='kitten ssh'
 # Custom aliases
 alias homeserver='~/.secrets/homeserver'
 alias oraclebox='~/.secrets/oraclebox'
+#alias sudo='run0 '
 alias sudo='sudo '
 alias nv='nvim'
 

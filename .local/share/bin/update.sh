@@ -1,14 +1,20 @@
-if [ "$1" == "up" ] ; then
-trap 'pkill -RTMIN+20 waybar' EXIT
-command="
+#!/bin/bash
+
 fastfetch
-$0 upgrade
-yay -Syu
-flatpak update
-read -n 1 -p 'Press any key to continue...'
-"
-kitty --title systemupdate sh -c "${command}"
-fi
+sudo pacman -Syyu --noconfirm
+flatpak update -y
+
+read -p "Update AUR packages? (Y/n)" yn
+case $yn in
+  [yY] ) echo updating...;
+    yay;;
+  [nN] ) echo exiting...;
+    exit;;
+  * ) echo updating...;
+    yay;;
+esac
+
+read -p "Press enter to exit" 
 #printf "\n\nUpdating Arch + AUR Packages:\n\n"
 #yay -Syu
 #printf "\n\nUpdating Flatpak Packages:\n\n"

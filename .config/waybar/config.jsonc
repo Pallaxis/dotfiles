@@ -152,7 +152,7 @@
        },
        "exec-if": "which waybar-module-pacman-updates",
        "exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300",
-       "on-click": "hyprctl dispatch exec 'update.sh up'",
+       "on-click": "hyprctl dispatch exec 'kitty update.sh'",
    },
     "tray": {
         "icon-size": 17,

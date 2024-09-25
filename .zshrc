@@ -93,6 +93,8 @@ alias oraclebox='~/.secrets/oraclebox'
 alias sudo='sudo '
 alias nv='nvim'
 
+stty -ixon
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"

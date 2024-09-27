@@ -36,6 +36,7 @@ bindkey '^[w' kill-region
 bindkey '\e[H'  beginning-of-line
 bindkey '\e[F'  end-of-line
 bindkey '\e[3~' delete-char
+bindkey -r "^S"
 
 # History
 HISTSIZE=5000
@@ -92,6 +93,9 @@ alias oraclebox='~/.secrets/oraclebox'
 #alias sudo='run0 '
 alias sudo='sudo '
 alias nv='nvim'
+
+# Disables XON/XOFF flow control
+stty -ixon
 
 # Shell integrations
 eval "$(fzf --zsh)"

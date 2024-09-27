@@ -13,7 +13,7 @@
 
 // positions //
 
-	"modules-left": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/r_end","custom/l_end","mpris","custom/r_end","custom/padd"],
+	"modules-left": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/r_end","custom/padd"],
 	"modules-center": ["custom/padd","custom/l_end","custom/icon","wlr/taskbar","custom/r_end","custom/padd"],
 	"modules-right": ["custom/padd","custom/l_end","backlight","network","pulseaudio","pulseaudio#microphone","custom/updates","custom/r_end","custom/l_end","tray","battery","custom/r_end","custom/l_end","custom/power","custom/r_end","custom/padd"],
 
@@ -21,7 +21,7 @@
 // modules //
 
 	"wlr/taskbar": {
-		"format": "{icon} {title}",
+		"format": "{icon} {name}",
 		"rotate": 0,
 		"icon-size": 17,
 		"icon-theme": "Tela-circle-pink",
@@ -29,6 +29,9 @@
 		"tooltip-format": "{title}",
 		"on-click": "activate",
 		"on-click-middle": "close",
+    "ignore-list": [
+      "kitty"
+    ]
 	},
 
   "custom/icon": {
@@ -37,22 +40,6 @@
     "tooltip-format": "",
   },
     
-    "mpris": {
-        "format": "{player_icon} {dynamic}",
-        "rotate": 0,
-        "format-paused": "{status_icon} <i>{dynamic}</i>",
-        "player-icons": { 
-            "default": "⏸",
-            "mpv": "🎵"
-        },
-        "status-icons": {
-            "paused": "▶"
-        },
-        // "ignored-players": ["firefox"]
-        "max-length": 50,
-        "interval": 1
-    },
-
     "idle_inhibitor": {
         "format": "{icon}",
         "rotate": 0,

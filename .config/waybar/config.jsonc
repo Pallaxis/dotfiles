@@ -21,7 +21,7 @@
 // modules //
 
 	"wlr/taskbar": {
-		"format": "{icon} {name}",
+		"format": "{icon} {name} ",
 		"rotate": 0,
 		"icon-size": 17,
 		"icon-theme": "Tela-circle-pink",

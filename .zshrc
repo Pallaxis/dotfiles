@@ -96,7 +96,7 @@ alias nv='nvim'
 
 # Disables XON/XOFF flow control
 stty -ixon
+stty -ixoff
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"

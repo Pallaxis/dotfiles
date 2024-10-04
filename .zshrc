@@ -73,6 +73,7 @@ alias po='yay -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $a
 alias cat='bat' # cat but with colors
 
 # Handy change dir shortcuts
+alias -- -='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ..3='cd ../../..'

@@ -2,21 +2,26 @@
 
 * {
   font-family: FantasqueSansMono Nerd Font;
-  font-size: 17px;
+  font-size: 12px;
   min-height: 0;
 }
 
 #waybar {
   background: transparent;
   color: @text;
-  margin: 5px 5px;
+  margin: 3px 5px;
 }
-
-#workspaces {
-  border-radius: 1rem;
-  margin: 5px;
+#custom-icon {
+  border-radius: 1rem 0px 0px 1rem;
+  padding: 0.5rem 1rem;
+  margin: 3px 0;
   background-color: @surface0;
   margin-left: 1rem;
+}
+#workspaces {
+  border-radius: 0px 1rem 1rem 0px;
+  margin: 3px 0;
+  background-color: @surface0;
 }
 
 #workspaces button {
@@ -35,6 +40,7 @@
   border-radius: 1rem;
 }
 
+#custom-network,
 #custom-music,
 #tray,
 #backlight,
@@ -45,7 +51,7 @@
 #custom-power {
   background-color: @surface0;
   padding: 0.5rem 1rem;
-  margin: 5px 0;
+  margin: 3px 0;
 }
 
 #clock {
@@ -80,8 +86,10 @@
   margin-left: 1rem;
 }
 
-#custom-music {
-  color: @mauve;
+#taskbar{
+  background-color: @surface0;
+  padding: 0.4rem;
+  margin: 3px;
   border-radius: 1rem;
 }
 

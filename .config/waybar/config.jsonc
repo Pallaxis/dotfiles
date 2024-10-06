@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/icon", "hyprland/workspaces"],
     "modules-center": ["wlr/taskbar"],
-    "modules-right": ["pulseaudio", "battery", "clock", "custom/network", "custom/updates", "tray", "custom/lock", "custom/power"],
+    "modules-right": ["pulseaudio", "battery", "custom/updates", "clock", "tray", "custom/lock", "custom/power"],
     "hyprland/workspaces": {
          "disable-scroll": true,
          "current-only": true,

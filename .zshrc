@@ -15,6 +15,8 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+#zinit ice depth=1
+#zinit light jeffreytse/zsh-vi-mode
 
 # Add in snippets
 zinit snippet OMZP::git
@@ -26,15 +28,14 @@ autoload -Uz compinit && compinit
 
 zinit cdreplay -q
 
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 # Keybindings
 bindkey -e
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
+bindkey '^[[5~' history-search-backward
+bindkey '^[[6~' history-search-forward
 bindkey '^[w' kill-region
-bindkey '\e[H'  beginning-of-line
-bindkey '\e[F'  end-of-line
+bindkey '^[[H'  beginning-of-line
+bindkey '^[[F'  end-of-line
 bindkey '\e[3~' delete-char
 bindkey -r "^S"
 
@@ -59,8 +60,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Helpful aliases
-alias  c='clear' # clear terminal
-alias  l='eza -lh  --icons=auto' # long list
+alias c='clear' # clear terminal
+alias l='eza -lh  --icons=auto' # long list
 alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
@@ -91,13 +92,16 @@ alias ssh='kitten ssh'
 # Custom aliases
 alias homeserver='~/.secrets/homeserver'
 alias oraclebox='~/.secrets/oraclebox'
-#alias sudo='run0 '
 alias sudo='sudo '
-alias nv='nvim'
+alias vi='nvim'
 
 # Disables XON/XOFF flow control
 stty -ixon
 stty -ixoff
 
+fastfetch
+
 # Shell integrations
 eval "$(fzf --zsh)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+#eval "$(starship init zsh)"

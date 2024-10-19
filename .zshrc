@@ -7,6 +7,13 @@ if [ ! -d "$ZINIT_HOME" ]; then
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
+# Autoruns tmux on terminal start
+#if [ -n "$PS1" ] && [ -z "$TMUX" ]; then
+#  # Adapted from https://unix.stackexchange.com/a/176885/347104
+#  # Create session 'main' or attach to 'main' if already exists.
+#  tmux new-session -A -s main
+#fi
+
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 

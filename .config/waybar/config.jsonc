@@ -8,7 +8,7 @@
   "margin-right": 5,
 
 	"modules-left": [
-		"custom/drun",
+		"custom/icon",
 		"hyprland/workspaces",
 		"cava"
 	],
@@ -26,14 +26,13 @@
 		"network#2",
 		"wireplumber",
 		"wireplumber#2",
-		"custom/lock",
 		"custom/power"
 	],
 
 
 
-	"custom/drun": {
-		"format": "   ",
+	"custom/icon": {
+		"format": "  ",
 		"tooltip": false,
 		"on-click": "deepin-calculator"
 	},
@@ -127,8 +126,8 @@
 		"format-ethernet": "󰌘",
 		"format-disconnected": "󰌙", //An empty format will hide the module.
 		"tooltip-format": "",
-		"tooltip-format-wifi": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
-		"tooltip-format-ethernet": "{ifname} 󰌘",
+		"tooltip-format-wifi": "󱚽 {essid}",
+		"tooltip-format-ethernet": "󰌘 {ifname}",
 		"tooltip-format-disconnected": "Disconnected",
 		"max-length": 50,
 		"format-icons": [
@@ -142,7 +141,7 @@
 	},
 	"network#2": {
 		"format": "{ifname}",
-		"format-wifi": "{essid}",
+		"format-wifi": "{ipaddr}/{cidr}",
 		"format-ethernet": "{ipaddr}/{cidr}",
 		"format-disconnected": "none",
 		"tooltip-format": "",
@@ -181,13 +180,8 @@
 		},
 		"on-click": "pavucontrol"
 	},
-	"custom/lock": {
-		"format": "    ",
-		"tooltip": false,
-		"on-click": "hyprlock"
-	},
 	"custom/power": {
-		"format": "  ⏻  ",
+		"format": " ⏻ ",
 		"tooltip": false,
 		"on-click": "wlogout -b 5"
 	}

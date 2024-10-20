@@ -1,17 +1,17 @@
-configuration
-{
-  display-run: "Apps: "
-}@theme "/dev/null/" *{
-   bg: #065465;
-   fg: #d6deeb;
-   bg-alt: #003747;
- 
-   background-color: @bg;
-   foreground-color: @fg;
-   text-color: #ffeb95;
- 
-   border: 0;
-   margin: 0;
-   padding: 2;
-   spacing: 0;
- }
+configuration{
+    modi: "run,drun,window";
+    icon-theme: "Oranchelo";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: " 󰕰  Window";
+    display-Network: " 󰤨  Network";
+    sidebar-mode: true;
+}
+
+@theme "catppuccin-mocha"

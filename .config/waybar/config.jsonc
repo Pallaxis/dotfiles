@@ -2,10 +2,10 @@
 	"layer": "bottom",
 	"position": "bottom",
 	"margin-bottom": 5,
-	"height": 40,
+    "height": 40,
 	"spacing": 4,
-  "margin-left": 5,
-  "margin-right": 5,
+    "margin-left": 5,
+    "margin-right": 5,
 
 	"modules-left": [
 		"custom/icon",
@@ -20,8 +20,8 @@
 	"modules-right": [
 		"custom/updicon",
 		"custom/upd",
-    "tray",
-    "custom/updates",
+        "tray",
+        "custom/updates",
 		"network",
 		"network#2",
 		"wireplumber",
@@ -117,7 +117,7 @@
        },
        "exec-if": "which waybar-module-pacman-updates",
        "exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300",
-       "on-click": "hyprctl dispatch exec 'kitty update.sh'",
+       "on-click": "hyprctl dispatch exec 'kitty ~/.local/share/bin/update.sh'",
    },
 
 	"network": {
@@ -141,13 +141,13 @@
 	},
 	"network#2": {
 		"format": "{ifname}",
-		"format-wifi": "{ipaddr}/{cidr}",
-		"format-ethernet": "{ipaddr}/{cidr}",
+		"format-wifi": "{ipaddr}",
+		"format-ethernet": "{ipaddr}",
 		"format-disconnected": "none",
 		"tooltip-format": "",
 		"tooltip-format-wifi": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
 		"tooltip-format-ethernet": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
-		"tooltip-format-disconnected": "NOT CONNECTED DAMMIT",
+		"tooltip-format-disconnected": "Disconnected",
 		"on-click": "nm-connection-editor"
 	},
 	"wireplumber": {
@@ -183,6 +183,6 @@
 	"custom/power": {
 		"format": " ⏻ ",
 		"tooltip": false,
-		"on-click": "wlogout"
+		"on-click": "~/.local/share/bin/wlogout.sh"
 	}
 }

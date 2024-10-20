@@ -19,3 +19,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 
 vim.api.nvim_set_option("clipboard", "unnamed") -- copying in wayland
+
+vim.filetype.add {
+  extension = { rasi = 'rasi' },
+  pattern = {
+    ['.*/waybar/config'] = 'jsonc',
+    ['.*/mako/config'] = 'dosini',
+    ['.*/kitty/*.conf'] = 'bash',
+    ['.*/hypr/.*%.conf'] = 'hyprlang',
+  },
+}

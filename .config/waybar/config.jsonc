@@ -107,7 +107,7 @@
 		"tooltip-format": "",
 		"tooltip-format-wifi": "󱚽 {essid}",
 		"tooltip-format-ethernet": "󰌘 {ifname}",
-		"tooltip-format-disconnected": "Disconnected",
+		"tooltip-format-disconnected": "",
 		"max-length": 50,
 		"format-icons": [
 			"󰤯",
@@ -122,7 +122,7 @@
 		"format": "{ifname}",
 		"format-wifi": "{ipaddr}",
 		"format-ethernet": "{ipaddr}",
-		"format-disconnected": "none",
+		"format-disconnected": "Disconnected",
 		"tooltip-format": "",
 		"tooltip-format-wifi": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
 		"tooltip-format-ethernet": " {bandwidthUpBytes} |  {bandwidthDownBytes}",

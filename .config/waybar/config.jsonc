@@ -127,7 +127,8 @@
 		"tooltip-format-wifi": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
 		"tooltip-format-ethernet": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
 		"tooltip-format-disconnected": "Disconnected",
-		"on-click": "nm-connection-editor"
+		"on-click": "nm-connection-editor",
+        "on-click-right": "~/.local/share/bin/nm-applet.sh toggle"
 	},
 	"wireplumber": {
 		"format": "{icon}",

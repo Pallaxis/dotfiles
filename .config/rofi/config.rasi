@@ -12,6 +12,10 @@ configuration{
     display-window: " 󰕰  Window";
     display-Network: " 󰤨  Network";
     sidebar-mode: true;
+
+    hover-select: true;
+    me-select-entry: "MouseSecondary";
+    me-accept-entry: "MousePrimary";
 }
 
 @theme "catppuccin-mocha"

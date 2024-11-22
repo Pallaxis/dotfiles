@@ -7,7 +7,7 @@
 fastfetch                                                               # Shows a sick ass fetch
 stty -ixon                                                              # Disables XON/XOFF flow control
 stty -ixoff                                                             # Disables sending of start/stop characters
-
+setopt extended_glob
 
 # There's probably a better way to do this
 export XDG_CACHE_HOME=$HOME/.cache/
@@ -70,7 +70,7 @@ bindkey -r "^S"
 
 # History
 HISTSIZE=5000
-HISTFILE=$XDG_CACHE_HOME/.zsh_history
+HISTFILE=$HOME/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory

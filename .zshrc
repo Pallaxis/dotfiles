@@ -1,13 +1,13 @@
 # Autostarting stuff
-#if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then                       # Starts Hyprland automatically when on TTY1
-#    exec Hyprland                                                         # Pairs nicely with auto-exec'ing a lock screen or FDE
-#fi
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then                       # Starts Hyprland automatically when on TTY1
+    exec Hyprland                                                         # Pairs nicely with auto-exec'ing a lock screen or FDE
+fi
 
 # Sending commands on terminal launch
 fastfetch                                                               # Shows a sick ass fetch
 stty -ixon                                                              # Disables XON/XOFF flow control
 stty -ixoff                                                             # Disables sending of start/stop characters
-setopt extended_glob
+#setopt extended_glob                                                   # Messes up my entire zsh
 
 # There's probably a better way to do this
 export XDG_CACHE_HOME=$HOME/.cache/

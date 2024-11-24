@@ -24,3 +24,4 @@ _darcs
 
 # Custom Stow Regex for ignoring files
 ^setup\.sh$
+/extras

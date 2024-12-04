@@ -1,6 +1,9 @@
 # Autostarting stuff
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then                       # Starts Hyprland automatically when on TTY1
-    exec Hyprland                                                         # Pairs nicely with auto-exec'ing a lock screen or FDE
+#if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then                       # Starts Hyprland automatically when on TTY1
+#    exec Hyprland                                                         # Pairs nicely with auto-exec'ing a lock screen or FDE
+#fi
+if uwsm check may-start; then
+    exec uwsm start -S hyprland.desktop
 fi
 
 # Sending commands on terminal launch

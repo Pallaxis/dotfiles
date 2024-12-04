@@ -51,6 +51,7 @@ zinit cdreplay -q
 
 # Keybindings
 WORDCHARS=${WORDCHARS/\/}														# Allows deleting up to / as a word
+bindkey -e
 bindkey '^K' history-search-backward
 bindkey '^J' history-search-forward
 bindkey '^[[H'  beginning-of-line

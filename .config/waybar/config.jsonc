@@ -1,11 +1,11 @@
 {
-    "layer": "bottom",
+	"layer": "bottom",
 	"position": "bottom",
 	"margin-bottom": 5,
-    "height": 40,
+	"height": 40,
 	"spacing": 4,
-    "margin-left": 5,
-    "margin-right": 5,
+	"margin-left": 5,
+	"margin-right": 5,
 
 	"modules-left": [
 		"custom/icon",
@@ -19,8 +19,8 @@
 	"modules-right": [
 		"custom/updicon",
 		"custom/upd",
-        "tray",
-        "custom/updates",
+		"tray",
+		"custom/updates",
 		"network",
 		"network#2",
 		"pulseaudio",
@@ -69,10 +69,10 @@
 		"icon-size": 25
 	},
 	"cava": {
-        "rotate" : 270,
-        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-        "bar_delimiter": 0
-    },
+		"rotate" : 270,
+		"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+		"bar_delimiter": 0
+	},
 
 
 
@@ -87,17 +87,17 @@
 		"tooltip": false
 	},
 
-    "custom/updates": {
-         "format": "{} {icon}",
-         "return-type": "json",
-         "format-icons": {
-             "has-updates": "󱍷",
-             "updated": "󰂪"
-         },
-         "exec-if": "which waybar-module-pacman-updates",
-         "exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300",
-         "on-click": "hyprctl dispatch exec 'kitty ~/.local/share/bin/update.sh'",
-    },
+	"custom/updates": {
+		"format": "{} {icon}",
+		"return-type": "json",
+		"format-icons": {
+			"has-updates": "󱍷",
+			"updated": "󰂪"
+		},
+		"exec-if": "which waybar-module-pacman-updates",
+		"exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300",
+		"on-click": "hyprctl dispatch exec 'kitty ~/.local/share/bin/update.sh'",
+	},
 
 	"network": {
 		"format": "{ifname}",
@@ -128,7 +128,7 @@
 		"tooltip-format-ethernet": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
 		"tooltip-format-disconnected": "Disconnected",
 		"on-click": "nm-connection-editor",
-        "on-click-right": "~/.local/share/bin/nm-applet.sh toggle"
+		"on-click-right": "~/.local/share/bin/nm-applet.sh toggle"
 	},
 	"wireplumber": {
 		"format": "{icon}",
@@ -156,12 +156,12 @@
 		},
 		"on-click": "pkill -x pavucontrol || pavucontrol -t 3"
 	},
-    "pulseaudio": {
-        "format": "{format_source}",
-        "format-source": "",
-        "format-source-muted": "",
+	"pulseaudio": {
+		"format": "{format_source}",
+		"format-source": "",
+		"format-source-muted": "",
 		"on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle"
-    },
+	},
 	"custom/power": {
 		"format": " ⏻ ",
 		"tooltip": false,

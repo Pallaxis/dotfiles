@@ -2,7 +2,6 @@ local opt = vim.opt
 -- tabs & indentation
 opt.tabstop = 4 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 4 -- spaces for indent width
-opt.expandtab = true -- expand tab to spaces
 opt.number = true -- line numbers 
 opt.relativenumber = true -- relative line numbers
 opt.breakindent = true

@@ -100,7 +100,7 @@ alias ..5='cd ../../../../..'
 
 alias mkdir='mkdir -p'															# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias cp='cp -r'																# Same for cp
-alias ssh='kitten ssh'															# Fixes "Error opening terminal: xterm-kitty" when using the default kitty term to open some programs through ssh
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"					# Fixes "Error opening terminal: xterm-kitty" when using the default kitty term to open some programs through ssh
 
 # Custom aliases
 alias homeserver='~/.secrets/homeserver'

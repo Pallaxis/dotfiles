@@ -11,6 +11,7 @@ stty -ixoff																		# Disables sending of start/stop characters
 # There's probably a better way to do this
 export XDG_CACHE_HOME=$HOME/.cache/
 
+export FZF_CTRL_T_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git "
 
 # Zinit stuff
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"				# Set the directory we want to store zinit and plugins
@@ -36,11 +37,13 @@ zinit snippet OMZP::command-not-found
 
 
 # Completion styling
+zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:*' default-color ""
+
 zstyle ':fzf-tab:*' fzf-flags --color=query:#89b4fa,hl:#f7b3e2,hl:#cba6f7,hl+:#cba6f7,selected-hl:#89b4fa,fg:#89b4fa,fg+:#89b4fa,bg+:#313244,info:#cba6f7,border:#cba6f7,pointer:#cba6f7,marker:#cba6f7
 
 

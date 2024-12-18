@@ -1,22 +1,22 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 fastfetch
-#sudo pacman -Syyu --noconfirm
-yay --answerdiff All --noconfirm
-flatpak update -y
+sudo pacman -Syu --noconfirm
+yay -a
+echo
+read -p "Update Flatpak packages? [Y/n]"$'\n> ' yn
+case $yn in
+	[yY] )
+		printf "\nUpdating Flatpaks...\n\n"
+		flatpak update -y;;
+	[nN] )
+		printf "\nSkipping Flatpaks.\n\n"
+		read -p "Press enter to exit" 
+		exit;;
+	* ) 
+		printf "\nUpdating Flatpaks...\n\n"
+		flatpak update -y;;
+esac
 
-#read -p "Update AUR packages? (Y/n)" yn
-#case $yn in
-#  [yY] ) echo updating...;
-#    yay;;
-#  [nN] ) echo exiting...;
-#    exit;;
-#  * ) echo updating...;
-#    yay;;
-#esac
-
+echo
 read -p "Press enter to exit" 
-#printf "\n\nUpdating Arch + AUR Packages:\n\n"
-#yay -Syu
-#printf "\n\nUpdating Flatpak Packages:\n\n"
-#flatpak update

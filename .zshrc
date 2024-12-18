@@ -80,7 +80,7 @@ setopt hist_find_no_dups
 alias c='clear'																	# Clear terminal
 alias l='eza -lh  --icons=auto'													# Long list
 alias ls='eza -1   --icons=auto'												# Short list
-alias ll='eza -lha --icons=auto --sort=name --group-directories-first'			# Long list all
+alias ll='eza -lhag --icons=auto --sort=name --group-directories-first'			# Long list all
 alias ld='eza -lhD --icons=auto'												# Long list dirs
 alias un='yay -Rns'																# Uninstall package
 alias up='update.sh up'															# Update system/package/aur

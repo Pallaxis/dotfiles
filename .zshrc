@@ -43,24 +43,33 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:*' default-color ""
-
 zstyle ':fzf-tab:*' fzf-flags --color=query:#89b4fa,hl:#f7b3e2,hl:#cba6f7,hl+:#cba6f7,selected-hl:#89b4fa,fg:#89b4fa,fg+:#89b4fa,bg+:#313244,info:#cba6f7,border:#cba6f7,pointer:#cba6f7,marker:#cba6f7
 
+#Prompt styling
+zstyle :prompt:pure:git:stash show yes
+zstyle ':prompt:pure:prompt:success' color '#cba6f7'
+zstyle ':prompt:pure:prompt:error' color '#f38ba8'
+zstyle ':prompt:pure:prompt:continuation' color '#cba6f7'
+zstyle ':prompt:pure:git:branch' color '#b4befe'
+zstyle ':prompt:pure:git:dirty' color '#f2cdcd'
 
 # Load completions
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
+autoload -U promptinit; promptinit
+prompt pure
 
 # Keybindings
 WORDCHARS=${WORDCHARS/\/}														# Allows deleting up to / as a word
-bindkey -e
+bindkey -v
 bindkey '^K' history-search-backward
 bindkey '^J' history-search-forward
 bindkey '^[[H'  beginning-of-line
 bindkey '^[[F'  end-of-line
 bindkey '\e[3~' delete-char														# Del key to delete under cursor
-
+bindkey '^U' kill-whole-line
+bindkey '^[^?' backward-kill-word
 
 # History
 HISTSIZE=5000
@@ -75,6 +84,7 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+setopt extended_glob null_glob
 
 # Helpful aliases
 alias c='clear'																	# Clear terminal
@@ -112,4 +122,3 @@ alias vi='nvim'
 # Shell integrations
 eval "$(batman --export-env)"
 eval "$(fzf --zsh)"
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"

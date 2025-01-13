@@ -41,7 +41,8 @@ zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:bat:*' fzf-preview 'bat $realpath' 
 zstyle ':fzf-tab:*' default-color ""
 zstyle ':fzf-tab:*' fzf-flags --color=query:#89b4fa,hl:#f7b3e2,hl:#cba6f7,hl+:#cba6f7,selected-hl:#89b4fa,fg:#89b4fa,fg+:#89b4fa,bg+:#313244,info:#cba6f7,border:#cba6f7,pointer:#cba6f7,marker:#cba6f7
 
@@ -53,10 +54,11 @@ zstyle ':prompt:pure:prompt:continuation' color '#cba6f7'
 zstyle ':prompt:pure:git:branch' color '#b4befe'
 zstyle ':prompt:pure:git:dirty' color '#f2cdcd'
 
-# Load completions
+# Load completions (Must be done after fzf-tab)
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
+# Loading prompt
 autoload -U promptinit; promptinit
 prompt pure
 
@@ -90,7 +92,7 @@ setopt extended_glob null_glob
 alias c='clear'																	# Clear terminal
 alias l='eza -lh  --icons=auto'													# Long list
 alias ls='eza -1   --icons=auto'												# Short list
-alias ll='eza -lha --icons=auto --sort=name --group-directories-first'			# Long list all
+alias ll='eza -lhag --icons=auto --sort=name --group-directories-first'			# Long list all
 alias ld='eza -lhD --icons=auto'												# Long list dirs
 alias un='yay -Rns'																# Uninstall package
 alias up='update.sh up'															# Update system/package/aur

@@ -57,11 +57,7 @@
 		"tooltip": false,
 		"active-only": false,
 		"persistent-workspaces": {
-			"1": [],
-			"2": [],
-			"3": [],
-			"4": [],
-			"5": [],
+			"*": 5,
 		}
 	},
 	"tray": {
